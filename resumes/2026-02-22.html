@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang='da'>
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>stream_resume_22.02.2026_12-00-58</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0; background: #0b0f14; color: #e8eef7;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    .top {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; justify-content: space-between;
+      padding: 14px 16px; border: 1px solid rgba(255,255,255,.08); border-radius: 14px;
+      background: rgba(255,255,255,.03);
+    }
+    .title { font-size: 22px; font-weight: 700; }
+    .meta { font-size: 13px; opacity: .85; }
+    .section {
+      margin-top: 18px; padding: 16px; border: 1px solid rgba(255,255,255,.08);
+      border-radius: 14px; background: rgba(255,255,255,.02);
+    }
+    h2 { margin: 0 0 10px 0; font-size: 16px; }
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      padding: 12px; border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03);
+    }
+    .cardTitle { font-weight: 700; margin-bottom: 8px; }
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      margin: 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+    .hint { font-size: 12px; opacity: .8; margin-bottom: 10px; }
+    .chartWrap {
+      height: 420px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.20);
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class='wrap'>
+    <div class='top'>
+      <div class='title'>Stream Resumé for Lasse__Roland</div>
+      <div class='meta'></div>
+    </div>
+
+    
+<section class='section'>
+  <h2>Viewers (hver 5. minut)</h2>
+  <div class='hint'></div>
+  <div class='chartWrap'>
+    <canvas id='viewerChart'></canvas>
+  </div>
+</section>
+
+<script src='https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js'></script>
+<script>
+  const labels = ["08:59","09:04","09:09","09:14","09:19","09:24","09:29","09:34","09:39","09:44","09:49","09:54","09:59","10:04","10:09","10:14","10:19","10:24","10:29","10:35","10:40","10:45","10:50","10:55","11:00","11:05","11:10","11:15","11:20","11:25","11:30","11:35","11:40","11:45","11:50","11:55","12:00"];
+  const dataReal = [0,6,7,10,13,14,15,15,17,18,19,19,18,18,23,24,26,26,28,29,31,29,27,29,32,31,33,32,34,33,35,32,36,36,36,36,39];
+  const dataHelix = [0,2,10,6,13,6,10,10,11,15,17,18,15,22,21,21,26,25,27,31,34,28,28,33,33,34,35,34,35,39,36,35,38,39,41,42,46];
+  const dataNot = [0,0,3,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,2,3,0,1,4,1,3,2,2,1,6,1,3,2,3,5,6,7];
+
+  const ctx = document.getElementById('viewerChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Logged in',
+          data: dataReal
+        },
+        {
+          label: 'Helix viewers',
+          data: dataHelix
+        },
+        {
+          label: 'Not logged in',
+          data: dataNot
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      scales: {
+        x: {
+          stacked: false,
+          ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 16 }
+        },
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+    <section class='section'>
+      <h2>Resume lavet i c# med Streamer.bot v1.0.4 og Powershell 5.1.26100.7705</h2>
+      <div class='grid'>
+        <div class='card'>
+  <div class='cardTitle'>📅 22.02.2026</div>
+  <pre class='cardBody'>🟢 Start: 2026-02-22 08:58:22
+🔴 Slut:  2026-02-22 12:00:58
+⏱ Varighed: 03:02:36</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>👥 SEERE</div>
+  <pre class='cardBody'>Logged in (avg / peak): 24,6 / 41
+Helix viewers (avg / peak): 24,8 / 46
+Not logged in (avg / peak): 1,5 / 7
+Samples: 181</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>💜 ENGAGEMENT</div>
+  <pre class='cardBody'>Nye følgere: 2
+Følgere:
+- djhappiness
+- robi5362</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>Check-ins:</div>
+  <pre class='cardBody'>- borgelund03 (4941 Bandholm)
+- cloomsymonster
+- dennisknudsen72 (6100 Haderslev)
+- djstitchnordk (7755 villerslev)
+- dj_pommergaard (4690 Haslev)
+- heartbeat_1972 (2200 København N)
+- lasse__roland (4250 Fuglebjerg)
+- monica_v95 (6200 Aabenraa)
+- mr_zena_ (9280 Storvorde)
+- nanetttte (8900 Randers C)
+- rofus___ (8400 Ebeltoft)
+- tinajaco (6230 Rødekro)</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>💰 SUPPORT</div>
+  <pre class='cardBody'>New Subs: 0
+Resubs: 0</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>🎁 Gift Leader: mr_zena_ (Gift Subs: 2, Gift Bombs: 0)</div>
+  <pre class='cardBody'>💣 Bomb Leader: mr_zena_ (Bombs: 0)
+🧨 Big Bombs (5+): mr_zena_ (Big Bombs: 0)
+💎 Bits Leader: zena_everclaw (Bits: 100)
+⭐ Sub Leader: mr_zena_ (Subs/Resubs: 0)</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>👑 Overall: mr_zena_</div>
+  <pre class='cardBody'>   Score: 1000
+   Subs/Resubs: 0
+   Gift Subs: 2
+   Gift Bombs: 0
+   Big Bombs (5+): 0
+   Bits: 0</pre>
+</div>
+
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
