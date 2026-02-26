@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang='da'>
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>stream_resume_15.02.2026_13-32-35</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0; background: #0b0f14; color: #e8eef7;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    .top {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; justify-content: space-between;
+      padding: 14px 16px; border: 1px solid rgba(255,255,255,.08); border-radius: 14px;
+      background: rgba(255,255,255,.03);
+    }
+    .title { font-size: 22px; font-weight: 700; }
+    .meta { font-size: 13px; opacity: .85; }
+    .section {
+      margin-top: 18px; padding: 16px; border: 1px solid rgba(255,255,255,.08);
+      border-radius: 14px; background: rgba(255,255,255,.02);
+    }
+    h2 { margin: 0 0 10px 0; font-size: 16px; }
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      padding: 12px; border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03);
+    }
+    .cardTitle { font-weight: 700; margin-bottom: 8px; }
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      margin: 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+    .hint { font-size: 12px; opacity: .8; margin-bottom: 10px; }
+    .chartWrap {
+      height: 420px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.20);
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class='wrap'>
+    <div class='top'>
+      <div class='title'>Stream Resumé for Lasse__Roland</div>
+      <div class='meta'></div>
+    </div>
+
+    
+<section class='section'>
+  <h2>Viewers (
+  <div class='hver 5. minut)</h2>
+  v1.0.1\Tekstfiler\StreamResumes\02.2026\viewer_timeseries_15.02.2026_09-06-33.csv</div>chartWrap'>
+    <canvas id='viewerChart'></canvas>
+  </div>
+</section>
+
+<script src='https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js'></script>
+<script>
+  const labels = ["09:07","09:12","09:17","09:22","09:27","09:32","09:37","09:42","09:47","09:52","09:57","10:02","10:07","10:12","10:17","10:22","10:28","10:33","10:38","10:43","10:48","10:53","10:58","11:03","11:08","11:13","11:18","11:23","11:28","11:33","11:38","11:43","11:48","11:53","11:59","12:04","12:09","12:14","12:19","12:24","12:29","12:34","12:39","12:44","12:49","12:54","12:59","13:04","13:09","13:14","13:19","13:24","13:29"];
+  const dataReal = [5,11,13,17,16,14,14,15,17,18,18,20,19,19,22,22,23,21,21,21,22,22,22,21,22,23,23,22,22,22,20,21,21,20,20,21,22,21,22,24,23,23,24,25,24,25,26,28,26,27,26,26,24];
+  const dataHelix = [2,10,14,18,17,16,17,19,20,19,21,20,23,24,25,23,25,24,26,26,25,24,23,24,23,26,28,23,24,28,22,25,24,22,21,23,25,24,28,27,29,26,30,27,28,27,28,32,29,31,28,29,25];
+  const dataNot = [0,0,1,1,1,2,3,4,3,1,3,0,4,5,3,1,2,3,5,5,3,2,1,3,1,3,5,1,2,6,2,4,3,2,1,2,3,3,6,3,6,3,6,2,4,2,2,4,3,4,2,3,1];
+
+  const ctx = document.getElementById('viewerChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Logged in',
+          data: dataReal
+        },
+        {
+          label: 'Helix viewers',
+          data: dataHelix
+        },
+        {
+          label: 'Not logged in',
+          data: dataNot
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      scales: {
+        x: {
+          stacked: false,
+          ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 16 }
+        },
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+    <section class='section'>
+      <h2>Resume lavet i c# med Streamer.bot v1.0.4 og Powershell 5.1.26100.7705</h2>
+      <div class='grid'>
+        <div class='card'>
+  <div class='cardTitle'>📅 15.02.2026</div>
+  <pre class='cardBody'>🟢 Start: 2026-02-15 09:06:33
+🔴 Slut:  2026-02-15 13:32:35
+⏱ Varighed: 04:26:01
+🧾 Timeseries (CSV): C:\Streaming\Streamer.bot-x64-v1.0.1\Tekstfiler\StreamResumes\02.2026\viewer_timeseries_15.02.2026_09-06-33.csv</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>👥 SEERE</div>
+  <pre class='cardBody'>Logged in (avg / peak): 21,1 / 28
+Helix viewers (avg / peak): 23,8 / 32
+Not logged in (avg / peak): 2,8 / 7
+Samples: 263</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>💜 ENGAGEMENT</div>
+  <pre class='cardBody'>Nye følgere: 2
+Følgere:
+- onethirdnelson
+- reffstrup</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>💰 SUPPORT</div>
+  <pre class='cardBody'>New Subs: 0
+Resubs: 0</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>🎁 Gift Leader: mr_zena_ (Gift Subs: 2, Gift Bombs: 0)</div>
+  <pre class='cardBody'>💎 Bits Leader: zena_everclaw (Bits: 100)
+⭐ Sub Leader: mr_zena_ (Subs/Resubs: 0)</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>👑 Overall: mr_zena_</div>
+  <pre class='cardBody'>   Subs/Resubs: 0
+   Gift Subs: 2
+   Gift Bombs: 0
+   Bits: 0</pre>
+</div>
+
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
