@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang='da'>
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>stream_resume_17.02.2026_20-50-04</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      margin: 0; background: #0b0f14; color: #e8eef7;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 20px; }
+    .top {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; justify-content: space-between;
+      padding: 14px 16px; border: 1px solid rgba(255,255,255,.08); border-radius: 14px;
+      background: rgba(255,255,255,.03);
+    }
+    .title { font-size: 22px; font-weight: 700; }
+    .meta { font-size: 13px; opacity: .85; }
+    .section {
+      margin-top: 18px; padding: 16px; border: 1px solid rgba(255,255,255,.08);
+      border-radius: 14px; background: rgba(255,255,255,.02);
+    }
+    h2 { margin: 0 0 10px 0; font-size: 16px; }
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      padding: 12px; border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03);
+    }
+    .cardTitle { font-weight: 700; margin-bottom: 8px; }
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      margin: 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+    .hint { font-size: 12px; opacity: .8; margin-bottom: 10px; }
+    .chartWrap {
+      height: 420px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.20);
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class='wrap'>
+    <div class='top'>
+      <div class='title'>Stream Resumé for Lasse__Roland</div>
+      <div class='meta'></div>
+    </div>
+
+    
+<section class='section'>
+  <h2>Viewers (hver 5. minut)</h2>
+  <div class='hint'></div>
+  <div class='chartWrap'>
+    <canvas id='viewerChart'></canvas>
+  </div>
+</section>
+
+<script src='https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js'></script>
+<script>
+  const labels = ["18:30","18:35","18:40","18:45","18:50","18:55","19:00","19:05","19:10","19:16","19:21","19:26","19:31","19:36","19:41","19:46","19:51","19:56","20:01","20:06","20:11","20:16","20:21","20:26","20:31","20:36","20:41","20:46"];
+  const dataReal = [0,3,7,9,17,16,17,20,20,21,20,21,21,21,21,17,19,18,19,17,19,19,18,18,20,19,18,14];
+  const dataHelix = [0,1,4,11,12,16,17,24,25,22,23,23,22,23,24,21,20,22,20,21,20,22,21,20,22,21,20,13];
+  const dataNot = [0,0,0,2,0,0,0,4,5,1,3,2,1,2,3,4,1,4,1,4,1,3,3,2,2,2,2,0];
+
+  const ctx = document.getElementById('viewerChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Logged in',
+          data: dataReal
+        },
+        {
+          label: 'Helix viewers',
+          data: dataHelix
+        },
+        {
+          label: 'Not logged in',
+          data: dataNot
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      scales: {
+        x: {
+          stacked: false,
+          ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 16 }
+        },
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+    <section class='section'>
+      <h2>Resume lavet i c# med Streamer.bot v1.0.4 og Powershell 5.1.26100.7705</h2>
+      <div class='grid'>
+        <div class='card'>
+  <div class='cardTitle'>📅 17.02.2026</div>
+  <pre class='cardBody'>🟢 Start: 2026-02-17 18:30:17
+🔴 Slut:  2026-02-17 20:50:04
+⏱ Varighed: 02:19:46</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>👥 SEERE</div>
+  <pre class='cardBody'>Logged in (avg / peak): 17,0 / 22
+Helix viewers (avg / peak): 18,7 / 27
+Not logged in (avg / peak): 2,1 / 6
+Samples: 139</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>💜 ENGAGEMENT</div>
+  <pre class='cardBody'>Nye følgere: 1
+Følgere:
+- hanse_r81</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>💰 SUPPORT</div>
+  <pre class='cardBody'>New Subs: 0
+Resubs: 0</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>🎁 Gift Leader: mr_zena_ (Gift Subs: 2, Gift Bombs: 0)</div>
+  <pre class='cardBody'>💎 Bits Leader: zena_everclaw (Bits: 100)
+⭐ Sub Leader: mr_zena_ (Subs/Resubs: 0)</pre>
+</div>
+<div class='card'>
+  <div class='cardTitle'>👑 Overall: mr_zena_</div>
+  <pre class='cardBody'>   Subs/Resubs: 0
+   Gift Subs: 2
+   Gift Bombs: 0
+   Bits: 0</pre>
+</div>
+
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
